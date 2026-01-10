@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2020 Free Software Foundation Europe e.V.
+# SPDX-FileCopyrightText: 2025 Kalle Fagerberg
+#
+# SPDX-License-Identifier: CC0-1.0
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions: {} # no permissions by default
+
+jobs:
+  reuse:
+    name: REUSE Compliance Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: fsfe/reuse-action@676e2d560c9a403aa252096d99fcab3e1132b0f5 # v6.0.0
+
+  zizmor:
+    name: Run zizmor 🌈
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write # Required for upload-sarif (used by zizmor-action) to upload SARIF files.
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Run zizmor 🌈
+        uses: zizmorcore/zizmor-action@e639db99335bc9038abc0e066dfcd72e23d26fb4 # v0.3.0
+
+  moonbit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Cache MoonBit dependencies
+        uses: actions/cache@v5
+        with:
+          path: ~/.moon/registry
+          key: ${{ runner.os }}-moonbit-${{ hashFiles('**/moon.mod.json') }}
+          restore-keys: |
+            ${{ runner.os }}-moonbit-
+
+      - name: Setup MoonBit
+        uses: hustcer/setup-moonbit@66fdadf7f54f35045a7dc6357f43b1fdd1909405 # v1.17
+
+      - name: Update MoonBit package registry
+        run: moon update
+
+      - name: Run tests
+        run: moon test

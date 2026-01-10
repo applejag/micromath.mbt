@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2025 Kalle Fagerberg
+#
+# SPDX-License-Identifier: CC0-1.0
+
+version = 1
+
+[[annotations]]
+path = [
+  "**/moon.mod.json",
+  "**/moon.pkg.json",
+  "**/mise.lock",
+]
+SPDX-FileCopyrightText = "2025 Kalle Fagerberg"
+SPDX-License-Identifier = "CC0-1.0"

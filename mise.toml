@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Kalle Fagerberg
+#
+# SPDX-License-Identifier: CC0-1.0
+
+[tools]
+uv = "latest"
+"pipx:reuse" = "latest"
+
+[settings]
+experimental = true
+lockfile = true

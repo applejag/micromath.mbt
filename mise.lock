@@ -1,0 +1,8 @@
+[[tools."pipx:reuse"]]
+version = "6.2.0"
+backend = "pipx:reuse"
+
+[[tools.uv]]
+version = "0.9.24"
+backend = "aqua:astral-sh/uv"
+"platforms.linux-x64" = { checksum = "sha256:cf307aa4271038daa334ca64e75aa40c0c085ce6fa0c0e6f21e41a2b62c7904d", url = "https://github.com/astral-sh/uv/releases/download/0.9.24/uv-x86_64-unknown-linux-musl.tar.gz"}

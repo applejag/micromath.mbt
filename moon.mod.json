@@ -2,8 +2,9 @@
   "name": "applejag/micromath",
   "version": "0.1.0",
   "readme": "README.mbt.md",
-  "repository": "",
-  "license": "Apache-2.0",
-  "keywords": [],
-  "description": ""
+  "repository": "https://github.com/applejag/micromath.mbt",
+  "license": "MIT",
+  "keywords": ["math", "embedded"],
+  "description": "Embedded math arithmetic, optimized for small code size at the cost of precision",
+  "source": "src"
 }

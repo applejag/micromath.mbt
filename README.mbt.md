@@ -47,6 +47,9 @@ Total tests: 6, passed: 6, failed: 0.
 
 Copyright &copy; 2026 Kalle Fagerberg
 
+Most code in this repository is based on the [micromath](https://github.com/tarcieri/micromath)
+library.
+
 This repository complies with the REUSE recommendations.
 Different licenses are used for different files. In general:
 

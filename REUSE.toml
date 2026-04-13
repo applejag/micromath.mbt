@@ -8,6 +8,7 @@ version = 1
 path = [
   "**/moon.mod.json",
   "**/moon.pkg.json",
+  "**/moon.pkg",
   "**/mise.lock",
 ]
 SPDX-FileCopyrightText = "2025 Kalle Fagerberg"

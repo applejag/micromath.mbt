@@ -6,5 +6,6 @@
   "license": "MIT",
   "keywords": ["math", "embedded"],
   "description": "Embedded math arithmetic, optimized for small code size at the cost of precision",
-  "source": "src"
+  "source": "src",
+  "preferred-target": "wasm"
 }

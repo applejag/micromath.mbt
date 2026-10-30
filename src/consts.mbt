@@ -58,4 +58,4 @@ pub const FRAC_2_PI : Float = 0.63661977236758138
 
 ///|
 /// Bitmask to select a float's sign.
-const SIGN_MASK : UInt = 0x8000_0000
+const SIGN_MASK : UInt32 = 0x8000_0000

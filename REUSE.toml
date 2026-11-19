@@ -9,6 +9,7 @@ path = [
   "**/moon.mod",
   "**/moon.pkg",
   "**/mise.lock",
+  ".mise/**",
 ]
 SPDX-FileCopyrightText = "2025 Kalle Fagerberg"
 SPDX-License-Identifier = "CC0-1.0"

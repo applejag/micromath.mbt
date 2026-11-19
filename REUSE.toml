@@ -6,9 +6,8 @@ version = 1
 
 [[annotations]]
 path = [
-  "**/moon.mod.json",
-  "**/moon.pkg.json",
   "**/moon.mod",
+  "**/moon.pkg",
   "**/mise.lock",
 ]
 SPDX-FileCopyrightText = "2025 Kalle Fagerberg"

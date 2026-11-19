@@ -1,0 +1,17 @@
+name = "applejag/micromath"
+
+version = "0.3.0"
+
+readme = "README.mbt.md"
+
+repository = "https://github.com/applejag/micromath.mbt"
+
+license = "MIT"
+
+keywords = [ "math", "embedded" ]
+
+description = "Embedded math arithmetic, optimized for small code size at the cost of precision"
+
+source = "src"
+
+preferred_target = "wasm"

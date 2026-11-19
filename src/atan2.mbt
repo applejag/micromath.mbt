@@ -19,8 +19,8 @@ fn atan2_norm(y : Float, x : Float) -> Float {
   let b : Float = 0.596_227
 
   // Extract sign bits from floating point values
-  let ux_s : UInt = SIGN_MASK & x.reinterpret_as_uint()
-  let uy_s : UInt = SIGN_MASK & y.reinterpret_as_uint()
+  let ux_s : UInt32 = SIGN_MASK & x.reinterpret_as_uint()
+  let uy_s : UInt32 = SIGN_MASK & y.reinterpret_as_uint()
 
   // Determine quadrant offset
   let q = Float::from_uint(((ux_s.lnot() & uy_s) >> 29) | (ux_s >> 30))
